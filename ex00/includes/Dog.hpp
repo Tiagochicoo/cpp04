@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:30 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:26:44 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:25 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/16 18:43:48 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include <iostream>
 # include <string>
+#include "Animal.hpp"
 
-class Animal
+class Dog : public Animal
 {
-	protected:
-		std::string _type;
-
 	public:
 
-		Animal();
-		Animal( Animal const & src );
-		~Animal();
+		Dog();
+		Dog( Dog const & src );
+		~Dog();
 
-		Animal &		operator=( Animal const & rhs );
-
+		Dog &		operator=( Dog const & value );
 
 };
 
-std::ostream &			operator<<( std::ostream & o, Animal const & i );
+std::ostream &			operator<<( std::ostream & o, Dog const & i );
 
-#endif /* ********************************************************** ANIMAL_H */
+#endif /* ************************************************************* DOG_H */

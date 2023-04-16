@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"animal.hpp": "c",
+		"dog.hpp": "c"
+	}
+}

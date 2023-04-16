@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:30 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:26:44 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:27 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/16 18:43:45 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include <iostream>
 # include <string>
+#include "Animal.hpp"
 
-class Animal
+class Cat : public Animal
 {
-	protected:
-		std::string _type;
-
 	public:
 
-		Animal();
-		Animal( Animal const & src );
-		~Animal();
+		Cat();
+		Cat( Cat const & src );
+		~Cat();
 
-		Animal &		operator=( Animal const & rhs );
-
+		Cat &		operator=( Cat const & value );
 
 };
 
-std::ostream &			operator<<( std::ostream & o, Animal const & i );
+std::ostream &			operator<<( std::ostream & o, Cat const & i );
 
-#endif /* ********************************************************** ANIMAL_H */
+#endif /* ************************************************************* CAT_H */

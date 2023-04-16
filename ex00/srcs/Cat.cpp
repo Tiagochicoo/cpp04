@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:13 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:51:59 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/16 18:47:09 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Animal::Animal()
+Cat::Cat()
 {
-	this->_type = "Animal";
+	this->_type = "Cat";
 }
 
-Animal::Animal( const Animal & src )
+Cat::Cat( const Cat & src ) : Animal::Animal(src)
 {
 	(void)src;
 }
@@ -30,7 +30,7 @@ Animal::Animal( const Animal & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Animal::~Animal()
+Cat::~Cat()
 {
 }
 
@@ -39,7 +39,7 @@ Animal::~Animal()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Animal &				Animal::operator=( Animal const & value )
+Cat &				Cat::operator=( Cat const & value )
 {
 	(void)value;
 	// if ( this != &value )
@@ -49,7 +49,7 @@ Animal &				Animal::operator=( Animal const & value )
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Animal const & i )
+std::ostream &			operator<<( std::ostream & o, Cat const & i )
 {
 	(void)i;
 	// o << "Value = " << i.getValue();

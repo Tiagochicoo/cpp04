@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:13 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:51:59 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:19 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/16 18:47:01 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Animal::Animal()
+Dog::Dog()
 {
-	this->_type = "Animal";
+	this->_type = "Dog";
 }
 
-Animal::Animal( const Animal & src )
+Dog::Dog( const Dog & src ) : Animal::Animal(src)
 {
 	(void)src;
 }
@@ -30,7 +30,7 @@ Animal::Animal( const Animal & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Animal::~Animal()
+Dog::~Dog()
 {
 }
 
@@ -39,17 +39,17 @@ Animal::~Animal()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Animal &				Animal::operator=( Animal const & value )
+Dog &				Dog::operator=( Dog const & value )
 {
 	(void)value;
-	// if ( this != &value )
+	//if ( this != &value )
 	//{
-	// this->_value = value.getValue();
+		//this->_value = value.getValue();
 	//}
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Animal const & i )
+std::ostream &			operator<<( std::ostream & o, Dog const & i )
 {
 	(void)i;
 	// o << "Value = " << i.getValue();
