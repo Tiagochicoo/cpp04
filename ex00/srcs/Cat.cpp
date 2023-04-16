@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:47:09 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/16 22:37:23 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,22 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	this->_type = "Cat";
+	std::cout << "Cat Default constructor called!" << std::endl;
 }
 
-Cat::Cat( const Cat & src ) : Animal::Animal(src)
+Cat::Cat(std::string type) : Animal(type)
+{
+	this->_type = type;
+	std::cout << "Cat String constructor called for " << _type << std::endl;
+}
+
+Cat::Cat( const Cat & src ) : Animal(src)
 {
 	(void)src;
+	std::cout << "Animal Copy constructor called!" << std::endl;
 }
 
 /*
@@ -32,6 +40,7 @@ Cat::Cat( const Cat & src ) : Animal::Animal(src)
 
 Cat::~Cat()
 {
+	std::cout << "Cat destructor called for " << _type << std::endl;
 }
 
 
@@ -61,10 +70,19 @@ std::ostream &			operator<<( std::ostream & o, Cat const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	Cat::makeSound() const
+{
+	std::cout << "MMMMMMMEEEEEEEEEOOOOOOOOOOOWWWWWWW" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
+
+std::string Cat::getType() const
+{
+	return _type;
+}
 
 
 /* ************************************************************************** */

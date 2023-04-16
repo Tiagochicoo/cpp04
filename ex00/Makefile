@@ -6,7 +6,7 @@
 #    By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/28 12:33:26 by tpereira          #+#    #+#              #
-#    Updated: 2023/04/16 18:44:11 by tpereira         ###   ########.fr        #
+#    Updated: 2023/04/16 22:33:17 by tpereira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ PROG		= animal
 CXX			= g++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 SRCS		= ./srcs/*.cpp
-INC			= ./includes/
+INC			= ./includes
 
 all : $(PROG)
 

@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:30 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:26:44 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/16 22:36:54 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@ class Animal
 	public:
 
 		Animal();
+		Animal(std::string type);
 		Animal( Animal const & src );
 		~Animal();
 
-		Animal &		operator=( Animal const & rhs );
+		Animal &		operator=( Animal const & value );
 
+		std::string getType() const;
 
+		virtual void makeSound() const;
 };
 
 std::ostream &			operator<<( std::ostream & o, Animal const & i );

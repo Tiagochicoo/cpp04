@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:19 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:47:01 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/16 22:37:42 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,22 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	this->_type = "Dog";
+	std::cout << "Dog Default constructor called!" << std::endl;
 }
 
-Dog::Dog( const Dog & src ) : Animal::Animal(src)
+Dog::Dog(std::string type) : Animal(type)
+{
+	this->_type = type;
+	std::cout << "Dog String constructor called for " << _type << std::endl;
+}
+
+Dog::Dog( const Dog & src ) : Animal(src)
 {
 	(void)src;
+	std::cout << "Animal Copy constructor called!" << std::endl;
 }
 
 /*
@@ -32,6 +40,7 @@ Dog::Dog( const Dog & src ) : Animal::Animal(src)
 
 Dog::~Dog()
 {
+	std::cout << "Dog destructor called for " << _type << std::endl;
 }
 
 
@@ -61,10 +70,18 @@ std::ostream &			operator<<( std::ostream & o, Dog const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	Dog::makeSound() const
+{
+	std::cout << "WOOOOFFF WOOOOFFF" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+std::string Dog::getType() const
+{
+	return _type;
+}
 
 /* ************************************************************************** */

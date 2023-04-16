@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 18:35:52 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 18:44:40 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/16 22:37:54 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-int main(void)
+int main()
 {
-	std::cout << "hello" << std::endl;
-	return (0);
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << meta->getType() << " " << std::endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+	return 0;
 }
