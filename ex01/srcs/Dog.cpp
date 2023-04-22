@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:19 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 12:07:08 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:41:51 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,24 @@
 
 Dog::Dog() : Animal()
 {
+	std::cout << "Dog Default constructor called!" << std::endl;
 	this->_brain = new Brain();
 	this->_type = "Dog";
-	std::cout << "Dog Default constructor called!" << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type)
 {
+	std::cout << "Dog String constructor called for " << _type << std::endl;
 	this->_brain = new Brain();
 	this->_type = type;
-	std::cout << "Dog String constructor called for " << _type << std::endl;
 }
 
 Dog::Dog( const Dog & src ) : Animal(src)
 {
-	(void)src;
 	std::cout << "Dog Copy constructor called!" << std::endl;
+	this->_brain = new Brain(*src._brain);
+	*this = src;
+	(void)src;
 }
 
 /*
@@ -51,13 +53,13 @@ Dog::~Dog()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Dog &				Dog::operator=( Dog const & value )
+Dog &				Dog::operator=( Dog const & rhs )
 {
-	(void)value;
-	//if ( this != &value )
-	//{
-		//this->_value = value.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		_brain = new Brain(*rhs._brain);
+		_type = rhs._type;
+	}
 	return *this;
 }
 
@@ -85,6 +87,11 @@ void	Dog::makeSound() const
 std::string Dog::getType() const
 {
 	return _type;
+}
+
+Brain* Dog::getBrain() const
+{
+	return this->_brain;
 }
 
 /* ************************************************************************** */

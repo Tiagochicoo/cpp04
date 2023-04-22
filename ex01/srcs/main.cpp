@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 18:35:52 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 12:47:35 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:38:16 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 
 int main()
 {
-	// int size = 10;
+	// PART I
+	
+	// int size = 2;
 	// Animal *array[size];
 	// for (int i = 0; i < size; i++)
 	// {
@@ -30,11 +32,30 @@ int main()
 	// for (int i = 0; i < size; i++)
 	// 	delete array[i];
 
-	Cat basic;
+
+	// PART II
+
+	Dog basic;
 	{
-		Cat tmp = basic;
-		std::cout << basic.getBrain() << std::endl;
-		std::cout << tmp.getBrain() << std::endl;
+		Dog tmp = basic;
+		std::cout << std::endl;
+		std::cout << "tmp   brain address -> 			" <<  tmp.getBrain() << std::endl;
 	}
+	{
+		std::cout << "end of scope" << std::endl;
+		std::cout << "basic brain address -> 			" << basic.getBrain() << std::endl;
+		std::cout << std::endl;
+	}
+	
+	// PART III
+
+	// {
+	// 	std::cout << std::endl;
+	// 	std::cout << std::endl;
+	// 	const Animal *j = new Dog();
+	// 	const Animal* i = new Cat();
+	// 	delete j;//should not create a leak
+	// 	delete i;
+	// }
 	return 0;
 }

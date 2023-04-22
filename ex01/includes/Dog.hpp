@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:25 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 12:07:06 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:38:51 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Dog : public Animal
 		std::string getType() const;
 
 		void makeSound() const;
+		Brain* getBrain() const;
 };
 
 std::ostream &			operator<<( std::ostream & o, Dog const & i );

@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:27 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 12:17:30 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:06:37 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Cat : public Animal
 
 		Cat &		operator=( Cat const & value );
 
-		virtual std::string getType() const;
+		std::string getType() const;
 
 		void makeSound() const;
 		Brain* getBrain() const;

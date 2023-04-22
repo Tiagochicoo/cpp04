@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 12:50:06 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:21:22 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,23 @@
 
 Cat::Cat() : Animal()
 {
+	std::cout << "Cat Default constructor called!" << std::endl;
 	this->_brain = new Brain();
 	this->_type = "Cat";
-	std::cout << "Cat Default constructor called!" << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type)
 {
+	std::cout << "Cat String constructor called for " << _type << std::endl;
 	this->_brain = new Brain();
 	this->_type = type;
-	std::cout << "Cat String constructor called for " << _type << std::endl;
 }
 
 Cat::Cat( const Cat & src ) : Animal(src)
 {
+	std::cout << "Cat Copy constructor called!" << std::endl;
 	this->_brain = new Brain(*src._brain);
 	*this = src;
-	std::cout << "Cat Copy constructor called!" << std::endl;
 }
 
 /*
@@ -56,8 +56,8 @@ Cat &				Cat::operator=( Cat const & rhs )
 {
 	if ( this != &rhs )
 	{
-		*this->_brain = *rhs._brain;
-		*this->_type = *rhs._type;
+		_brain = new Brain(*rhs._brain);
+		_type = rhs._type;
 	}
 	return *this;
 }
