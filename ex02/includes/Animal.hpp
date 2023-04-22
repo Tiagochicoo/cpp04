@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:30 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 17:55:58 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 18:59:46 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class Animal
 		Animal &		operator=( Animal const & value );
 
 		virtual std::string getType() const = 0;
-
 		virtual void makeSound() const = 0;
 };
 

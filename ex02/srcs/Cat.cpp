@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 17:21:22 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 18:02:54 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cat::Cat( const Cat & src ) : Animal(src)
 {
 	std::cout << "Cat Copy constructor called!" << std::endl;
 	this->_brain = new Brain(*src._brain);
-	*this = src;
+	this->_type = src._type;
 }
 
 /*

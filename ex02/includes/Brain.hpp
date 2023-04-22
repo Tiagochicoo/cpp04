@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:22:27 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 11:23:08 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 18:57:35 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ class Brain
 		~Brain();
 
 		Brain &		operator=( Brain const & rhs );
-
-
 };
 
 std::ostream &			operator<<( std::ostream & o, Brain const & i );
