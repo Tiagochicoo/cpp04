@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:13 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 09:14:40 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 10:04:42 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 Animal::Animal()
 {
-	_type = "Animal";
+	_type = "Pet";
 	std::cout << "Animal Default constructor called!" << std::endl;
 }
 

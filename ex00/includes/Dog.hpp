@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:25 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/16 22:37:36 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 10:01:28 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Dog : public Animal
 
 		Dog &		operator=( Dog const & value );
 
-		virtual std::string getType() const;
+		std::string getType() const;
 
 		void makeSound() const;
 };

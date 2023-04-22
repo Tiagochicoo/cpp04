@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 09:12:48 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 10:04:13 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::Cat(std::string type) : Animal(type)
 Cat::Cat( const Cat & src ) : Animal(src)
 {
 	(void)src;
-	std::cout << "Animal Copy constructor called!" << std::endl;
+	std::cout << "Cat Copy constructor called!" << std::endl;
 }
 
 /*

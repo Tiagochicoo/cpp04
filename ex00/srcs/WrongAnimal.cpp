@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:19 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 10:04:09 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:13 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/22 11:18:57 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Dog::Dog() : Animal()
+WrongAnimal::WrongAnimal()
 {
-	this->_type = "Dog";
-	std::cout << "Dog Default constructor called!" << std::endl;
+	_type = "Pet";
+	std::cout << "WrongAnimal Default constructor called!" << std::endl;
 }
 
-Dog::Dog(std::string type) : Animal(type)
+WrongAnimal::WrongAnimal(std::string type)
 {
 	this->_type = type;
-	std::cout << "Dog String constructor called for " << _type << std::endl;
+	std::cout << "WrongAnimal String constructor called for " << _type << std::endl;
 }
 
-Dog::Dog( const Dog & src ) : Animal(src)
+WrongAnimal::WrongAnimal( const WrongAnimal & src )
 {
 	(void)src;
-	std::cout << "Dog Copy constructor called!" << std::endl;
+	std::cout << "WrongAnimal Copy constructor called for " << _type << std::endl;
 }
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Dog::~Dog()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Dog destructor called for " << _type << std::endl;
+	std::cout << "WrongAnimal destructor called for " << _type << std::endl;
 }
 
 
@@ -48,38 +48,37 @@ Dog::~Dog()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Dog &				Dog::operator=( Dog const & value )
+WrongAnimal &				WrongAnimal::operator=( WrongAnimal const & value )
 {
 	(void)value;
-	//if ( this != &value )
+	// if ( this != &value )
 	//{
-		//this->_value = value.getValue();
+	// this->_value = value.getValue();
 	//}
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Dog const & i )
+std::ostream &			operator<<( std::ostream & o, WrongAnimal const & i )
 {
 	(void)i;
 	// o << "Value = " << i.getValue();
 	return o;
 }
 
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void	Dog::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-	std::cout << "WOOOOFFF WOOOOFFF" << std::endl;
+	std::cout << "WrongAnimal sounds from ----->>>> " << _type << std::endl;
 }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
-std::string Dog::getType() const
+std::string WrongAnimal::getType() const
 {
 	return _type;
 }

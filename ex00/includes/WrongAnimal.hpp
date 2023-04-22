@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 21:15:27 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 10:01:15 by tpereira         ###   ########.fr       */
+/*   Created: 2023/04/14 21:15:30 by tpereira          #+#    #+#             */
+/*   Updated: 2023/04/22 10:02:36 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 # include <string>
-#include "Animal.hpp"
 
-class Cat : public Animal
+class WrongAnimal
 {
+	protected:
+		std::string _type;
+
 	public:
 
-		Cat();
-		Cat(std::string type);
-		Cat( Cat const & src );
-		~Cat();
+		WrongAnimal();
+		WrongAnimal(std::string type);
+		WrongAnimal( WrongAnimal const & src );
+		~WrongAnimal();
 
-		Cat &		operator=( Cat const & value );
+		WrongAnimal &		operator=( WrongAnimal const & value );
 
-		virtual std::string getType() const;
+		std::string getType() const;
 
 		void makeSound() const;
-
 };
 
-std::ostream &			operator<<( std::ostream & o, Cat const & i );
+std::ostream &			operator<<( std::ostream & o, WrongAnimal const & i );
 
-#endif /* ************************************************************* CAT_H */
+#endif /* ********************************************************** WRONGANIMAL_H */
