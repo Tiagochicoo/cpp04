@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 18:35:52 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 11:47:02 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 12:47:35 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,23 @@
 
 int main()
 {
-	int size = 10;
-	Animal *array[size];
-	for (int i = 0; i < size; i++)
+	// int size = 10;
+	// Animal *array[size];
+	// for (int i = 0; i < size; i++)
+	// {
+	// 	if (i < (size / 2))	// Dogs
+	// 		array[i] = new Dog();
+	// 	else		// Cats
+	// 		array[i] = new Cat();
+	// }
+	// for (int i = 0; i < size; i++)
+	// 	delete array[i];
+
+	Cat basic;
 	{
-		if (i < (size / 2))	// Dogs
-			array[i] = new Dog();
-		else		// Cats
-			array[i] = new Cat();
+		Cat tmp = basic;
+		std::cout << basic.getBrain() << std::endl;
+		std::cout << tmp.getBrain() << std::endl;
 	}
-	for (int i = 0; i < size; i++)
-		delete array[i];
 	return 0;
 }

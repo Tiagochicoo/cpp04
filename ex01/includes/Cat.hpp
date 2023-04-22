@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:27 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 11:30:34 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 12:17:30 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ class Cat : public Animal
 		virtual std::string getType() const;
 
 		void makeSound() const;
-
+		Brain* getBrain() const;
 };
+
 
 std::ostream &			operator<<( std::ostream & o, Cat const & i );
 

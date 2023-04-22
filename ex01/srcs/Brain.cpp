@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:22:22 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 11:28:57 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 12:47:20 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Brain::Brain()
 
 Brain::Brain( const Brain & src )
 {
-	(void)src;
+	*this = src;
 	std::cout << "Brain Copy constructor called!" << std::endl;
 }
 
@@ -44,11 +44,11 @@ Brain::~Brain()
 
 Brain &				Brain::operator=( Brain const & rhs )
 {
-	(void)rhs;
-	// if ( this != &rhs )
-	//{
-	// this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		for (int i = 0; i < 100; i++)
+			ideas[i] = rhs.ideas[i];
+	}
 	return *this;
 }
 

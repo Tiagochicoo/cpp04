@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:15:16 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 11:32:38 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/22 12:50:06 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Cat::Cat(std::string type) : Animal(type)
 
 Cat::Cat( const Cat & src ) : Animal(src)
 {
-	(void)src;
+	this->_brain = new Brain(*src._brain);
+	*this = src;
 	std::cout << "Cat Copy constructor called!" << std::endl;
 }
 
@@ -51,13 +52,13 @@ Cat::~Cat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Cat &				Cat::operator=( Cat const & value )
+Cat &				Cat::operator=( Cat const & rhs )
 {
-	(void)value;
-	// if ( this != &value )
-	//{
-	// this->_value = value.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		*this->_brain = *rhs._brain;
+		*this->_type = *rhs._type;
+	}
 	return *this;
 }
 
@@ -85,6 +86,11 @@ void	Cat::makeSound() const
 std::string Cat::getType() const
 {
 	return _type;
+}
+
+Brain* Cat::getBrain() const
+{
+	return this->_brain;
 }
 
 
