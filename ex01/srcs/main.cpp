@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 18:35:52 by tpereira          #+#    #+#             */
-/*   Updated: 2023/04/22 17:56:52 by tpereira         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:51:01 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ int main()
 {
 	// PART I
 
-	// int size = 2;
-	// Animal *array[size];
-	// for (int i = 0; i < size; i++)
-	// {
-	// 	if (i < (size / 2))	// Dogs
-	// 		array[i] = new Dog();
-	// 	else		// Cats
-	// 		array[i] = new Cat();
-	// }
-	// for (int i = 0; i < size; i++)
-	// 	delete array[i];
+	int size = 2;
+	Animal *array[size];
+	for (int i = 0; i < size; i++)
+	{
+		if (i < (size / 2))	// Dogs
+			array[i] = new Dog();
+		else		// Cats
+			array[i] = new Cat();
+	}
+	for (int i = 0; i < size; i++)
+		delete array[i];
 
 
 	// PART II
